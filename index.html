@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CELEX Ensemble — Design Portfolio</title>
+<title>Ankita Tomar — CELEX Ensemble Design Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --cream: #f8f5ec;
     --paper: #fffdf7;
-    --oxblood: #8a1c1c;
-    --gold: #b8955a;
-    --ink: #1f2a26;
-    --muted: #5d6662;
+    --green: #0d2525;
+    --gold: #c9a76c;
+    --ink: #0d2525;
+    --muted: #4f5c5a;
     --line: #e6dfcf;
   }
   * { box-sizing: border-box; }
@@ -27,11 +27,12 @@
   .wrap { max-width: 860px; margin: 0 auto; padding: 64px 28px 96px; }
   header { text-align: center; border-bottom: 1px solid var(--gold); padding-bottom: 36px; margin-bottom: 48px; }
   .eyebrow { letter-spacing: .35em; text-transform: uppercase; font-size: 11px; color: var(--gold); font-weight: 600; }
-  h1 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 46px; margin: 10px 0 6px; color: var(--oxblood); line-height: 1.1; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 46px; margin: 10px 0 6px; color: var(--green); line-height: 1.1; }
   .byline { color: var(--muted); font-size: 14px; }
+  .byline strong { color: var(--green); font-weight: 600; }
   h2 {
     font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 30px;
-    color: var(--oxblood); margin: 64px 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
+    color: var(--green); margin: 64px 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
   }
   h2 .num { color: var(--gold); margin-right: 10px; }
   h3 { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin: 32px 0 14px; font-weight: 600; }
@@ -39,15 +40,35 @@
     background: var(--paper); border: 1px solid var(--line); border-left: 3px solid var(--gold);
     padding: 20px 24px; margin-bottom: 14px; border-radius: 2px;
   }
-  .card h4 { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 600; margin: 0 0 6px; color: var(--ink); }
+  .card h4 { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 600; margin: 0 0 6px; color: var(--green); }
   .card p { margin: 0 0 10px; color: var(--muted); }
   .links { font-size: 13px; font-weight: 500; }
-  .links a { color: var(--oxblood); text-decoration: none; border-bottom: 1px solid var(--gold); margin-right: 14px; }
+  .links a { color: var(--green); text-decoration: none; border-bottom: 1px solid var(--gold); margin-right: 14px; }
   .links a:hover { color: var(--gold); }
   .todo { background: #fff3c4; color: #7a5b00; padding: 1px 6px; border-radius: 2px; font-size: 13px; }
   .overview p { font-size: 16px; }
   .meta { font-size: 14px; color: var(--muted); }
-  .meta strong { color: var(--ink); }
+  .meta strong { color: var(--green); }
+  .meta a { color: var(--green); border-bottom: 1px solid var(--gold); text-decoration: none; }
+
+  /* Card images: click to open full size */
+  .img-link { display: inline-block; margin: 6px 0 14px; }
+  .card-img {
+    display: block; max-width: 100%; max-height: 560px; width: auto; height: auto;
+    border: 1px solid var(--line); border-radius: 2px;
+    transition: border-color .2s;
+  }
+  .img-link:hover .card-img { border-color: var(--gold); }
+  .img-pair {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    margin: 6px 0 14px; align-items: start;
+  }
+  .img-pair .img-link { margin: 0; }
+  .img-pair .card-img { max-height: 440px; }
+  @media (max-width: 560px) {
+    .img-pair { grid-template-columns: 1fr; }
+  }
+
   footer { text-align: center; margin-top: 80px; color: var(--gold); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; }
 </style>
 </head>
@@ -55,16 +76,16 @@
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Design Portfolio</div>
-  <h1>CELEX Ensemble</h1>
-  <div class="byline"><span class="todo">Your name</span> · <span class="todo">Role</span> · <span class="todo">Start month</span> – October 2026</div>
+  <div class="eyebrow">Design Portfolio · CELEX Ensemble</div>
+  <h1>Ankita Tomar</h1>
+  <div class="byline"><strong>Communications &amp; Marketing Executive</strong> · May 2025 – Present</div>
 </header>
 
 <section class="overview">
   <h2>Overview</h2>
   <p>CELEX Ensemble is a London-based, invitation-only community for luxury wedding professionals. Its flagship experience is the CELEX Sojourn, a familiarisation trip that brings top wedding planners into a destination. This portfolio covers the design and copy I produced across social media, email, event print, web and guest guidelines, including three Sojourns: Vietnam (The Jade Passage, September 2026), Mexico (À La Mexicana, October 2026) and Morocco (December 2026).</p>
-  <p class="meta"><strong>Website:</strong> <a href="https://celex-ensemble.com/" target="_blank" style="color:var(--oxblood)">celex-ensemble.com</a><br>
-  <strong>Tools:</strong> <span class="todo">Canva / Figma / Adobe / Webflow / etc.</span></p>
+  <p class="meta"><strong>Website:</strong> <a href="https://celex-ensemble.com/" target="_blank">celex-ensemble.com</a><br>
+  <strong>Tools:</strong> Canva, WordPress Elementor, Mailchimp, Instagram, LinkedIn, Edits, Claude Design &amp; Code</p>
 </section>
 
 <section>
@@ -79,11 +100,16 @@
   <div class="card">
     <h4>Special campaign carousels + blog</h4>
     <p>Carousels tied to cultural moments, each paired with a long-form blog so the post drives traffic to the site. Example: the World Cultural Diversity Day campaign.</p>
+    <a class="img-link" href="images/special-campaign-post-blog.png" target="_blank"><img class="card-img" src="images/special-campaign-post-blog.png" alt="World Cultural Diversity Day carousel post and its companion blog" loading="lazy"></a>
     <div class="links"><a href="https://www.instagram.com/p/DYnKprcArcs/" target="_blank">Carousel</a><a href="https://celex-ensemble.com/article/multicultural-weddings-editorial/" target="_blank">Blog</a></div>
   </div>
   <div class="card">
     <h4>Client-specific campaigns (4 campaigns × 27 clients)</h4>
     <p>Four campaign templates, each applied to all 27 member clients: 108 posts in total. Each campaign has its own layout and copy structure, with imagery and member details changed per post.</p>
+    <div class="img-pair">
+      <a class="img-link" href="images/client-specific-campaigns.png" target="_blank"><img class="card-img" src="images/client-specific-campaigns.png" alt="Client-specific campaign posts for CELEX members" loading="lazy"></a>
+      <a class="img-link" href="images/client-specific-campaign-2.png" target="_blank"><img class="card-img" src="images/client-specific-campaign-2.png" alt="Client-specific campaign posts, second campaign" loading="lazy"></a>
+    </div>
     <div class="links">
       <a href="https://www.instagram.com/p/DTV2afUglWN/" target="_blank">Campaign 1</a>
       <a href="https://www.instagram.com/p/DTAFhM4ks24/" target="_blank">Campaign 2</a>
@@ -121,8 +147,9 @@
   <h2><span class="num">02</span>Email Newsletters</h2>
   <h3>Ensemble Journal</h3>
   <div class="card">
-    <h4><span class="todo">Issue name, date</span></h4>
+    <h4>October issue <span class="todo">year, issue name</span></h4>
     <p><span class="todo">Theme / goal; open rate or click-through rate if available</span></p>
+    <a class="img-link" href="images/mailchimp-newsletter-october.png" target="_blank"><img class="card-img" src="images/mailchimp-newsletter-october.png" alt="Ensemble Journal October newsletter built in Mailchimp" loading="lazy"></a>
     <div class="links"><span class="todo">Add link</span></div>
   </div>
 </section>
@@ -138,27 +165,23 @@
   </div>
   <div class="card">
     <h4>Welcome Suite: cover card + founder's welcome letter</h4>
-    <p>The opening pieces of the guest suite. A lace-frame cover with a lotus motif, and a welcome letter in cream with oxblood dragon fretwork corners, setting the trip's palette and voice.</p>
+    <p>The opening pieces of the guest suite. A lace-frame cover with a lotus motif, and a welcome letter in cream with dragon fretwork corners, setting the trip's palette and voice.</p>
+    <a class="img-link" href="images/vietnam-welcome-suite.png" target="_blank"><img class="card-img" src="images/vietnam-welcome-suite.png" alt="Vietnam Welcome Suite: lotus lace-frame cover card and founder's welcome letter" loading="lazy"></a>
     <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
-    <h4>Personalised welcome fans (9)</h4>
-    <p>Hand-fan format with each guest's name in script and a gold handle with dragon detail. A keepsake rather than a place card.</p>
+    <h4>Day-wise invitation cards (16)</h4>
+    <p>One card per experience across six days, from the welcome dinner at the Metropole to dinner inside Dragon Pearl Cave, including the Day 2 Wedding Fest and Calla Bridal Show invitations at Fairmont Hanoi. Each card has a titled theme, short narrative copy, dress code and timing. The look changes per venue (reds for Hanoi, blues for Ha Long Bay, celadon for Hilton Quang Hanh) while the logo, type and card structure stay the same throughout.</p>
+    <div class="img-pair">
+      <a class="img-link" href="images/vietnam-day-wise%20card-day3.png" target="_blank"><img class="card-img" src="images/vietnam-day-wise%20card-day3.png" alt="Vietnam day-wise invitation card, Day 3" loading="lazy"></a>
+      <a class="img-link" href="images/vietnam-day-wise-card-day6.png" target="_blank"><img class="card-img" src="images/vietnam-day-wise-card-day6.png" alt="Vietnam day-wise invitation card, Day 6" loading="lazy"></a>
+    </div>
     <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
-    <h4>Day-wise invitation cards (14)</h4>
-    <p>One card per experience across six days, from the welcome dinner at the Metropole to dinner inside Dragon Pearl Cave. Each card has a titled theme, short narrative copy, dress code and timing. The look changes per venue (oxblood for Hanoi, blues for Ha Long Bay, celadon for Hilton Quang Hanh) while the logo, type and card structure stay the same throughout.</p>
-    <div class="links"><span class="todo">Add link</span></div>
-  </div>
-  <div class="card">
-    <h4>Wedding Fest 2026 + Calla Bridal Show invitations</h4>
-    <p>Invitations for the industry day at Fairmont Hanoi, co-branded with the host partner.</p>
-    <div class="links"><span class="todo">Add link</span></div>
-  </div>
-  <div class="card">
-    <h4>Panel session fans (3)</h4>
-    <p>Given to each panelist the day before their session, with their slot and topic. One fan per panel (Scale, Originality, Decision Making), each showing the session time and the question the panel would discuss.</p>
+    <h4>Hand-fan series: personalised welcome fans + panel session fans (12)</h4>
+    <p>One fan format used two ways. Nine personalised welcome fans, each with a guest's name in script, made as keepsakes rather than place cards. Three panel fans (Scale, Originality, Decision Making) given to each panelist the day before their session, showing their slot, topic and the question the panel would discuss.</p>
+    <a class="img-link" href="images/vietnam-welcome-suite-fancard.png" target="_blank"><img class="card-img" src="images/vietnam-welcome-suite-fancard.png" alt="Vietnam personalised hand-fan design" loading="lazy"></a>
     <div class="links"><span class="todo">Add link</span></div>
   </div>
 
@@ -166,6 +189,7 @@
   <div class="card">
     <h4>Welcome Booklet</h4>
     <p><span class="todo">Brief</span></p>
+    <a class="img-link" href="images/mexico-welcome-booklet.png" target="_blank"><img class="card-img" src="images/mexico-welcome-booklet.png" alt="À La Mexicana Welcome Booklet" loading="lazy"></a>
     <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
@@ -176,6 +200,7 @@
   <div class="card">
     <h4>Panel Session Invitations</h4>
     <p>One card per session for attendees, giving the panel title, theme, four focus questions and the panelists. Co-branded with Casa Malca Tulum.</p>
+    <a class="img-link" href="images/mexico-panel-session-attendee-invites.png" target="_blank"><img class="card-img" src="images/mexico-panel-session-attendee-invites.png" alt="À La Mexicana panel session invitations for attendees" loading="lazy"></a>
     <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
