@@ -37,6 +37,10 @@
   h2 .num { color: var(--gold); margin-right: 10px; }
   h3 { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin: 32px 0 14px; font-weight: 600; }
   .section-intro { color: var(--muted); margin: 14px 0 22px; }
+  .note {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px;
+    color: var(--muted); margin: 14px 0 22px; padding-left: 14px; border-left: 1px solid var(--gold);
+  }
   .card {
     background: var(--paper); border: 1px solid var(--line); border-left: 3px solid var(--gold);
     padding: 20px 24px; margin-bottom: 14px; border-radius: 2px;
@@ -46,7 +50,6 @@
   .links { font-size: 13px; font-weight: 500; }
   .links a { color: var(--green); text-decoration: none; border-bottom: 1px solid var(--gold); margin-right: 14px; }
   .links a:hover { color: var(--gold); }
-  .todo { background: #fff3c4; color: #7a5b00; padding: 1px 6px; border-radius: 2px; font-size: 13px; }
   .overview p { font-size: 16px; }
   .meta { font-size: 14px; color: var(--muted); }
   .meta strong { color: var(--green); }
@@ -60,6 +63,14 @@
     transition: border-color .2s;
   }
   .img-link:hover .card-img, .img-link:hover .section-img { border-color: var(--gold); }
+
+  /* Single image with a caption */
+  .captioned { margin: 6px 0 14px; }
+  .captioned .img-link { margin: 0; }
+  .img-caption {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px;
+    color: var(--green); margin-top: 6px;
+  }
 
   /* Overview image for a sub-section (full width) */
   .section-link { display: block; margin: 0 0 18px; }
@@ -168,17 +179,26 @@
 
 <section>
   <h2><span class="num">02</span>Email Newsletters</h2>
-  <h3>Ensemble Journal</h3>
+  <h3>Ensemble Journal · Mailchimp</h3>
   <div class="card">
-    <h4>October 2026 issue: partnership proposal</h4>
-    <p>Written for hotel groups and tourism boards, proposing collaboration on future events and Sojourns. The issue showed the current Sojourns in progress and how existing partners are benefiting, to make the case for joining. <span class="todo">What evidence the issue used (e.g. coverage, planner numbers, partner results); open or click rate if available</span></p>
-    <a class="img-link" href="images/mailchimp-newsletter-october.png" target="_blank"><img class="card-img" src="images/mailchimp-newsletter-october.png" alt="Ensemble Journal October 2026 partnership newsletter built in Mailchimp" loading="lazy"></a>
-    <div class="links"><span class="todo">Add link</span></div>
+    <h4>Monthly email campaigns</h4>
+    <p>I've run the Ensemble Journal every month since May 2025, designing each campaign in Mailchimp. Alongside the emails themselves, I manage the audience: segmenting and filtering contacts so each send reaches the right people, and adding sign-up and preference forms to learn what subscribers want to hear about. Issues cover CELEX campaigns, Sojourn updates and business news.</p>
+    <div class="captioned">
+      <a class="img-link" href="images/mailchimp-newsletter-october.png" target="_blank"><img class="card-img" src="images/mailchimp-newsletter-october.png" alt="Ensemble Journal October 2026 partnership newsletter built in Mailchimp" loading="lazy"></a>
+      <div class="img-caption">October 2026 issue: partnership proposal</div>
+    </div>
+    <div class="links">
+      <a href="https://mailchi.mp/b30f5dd6fdaf/october-newsletter-2026" target="_blank">October 2026</a>
+      <a href="https://mailchi.mp/5de86564b830/september-newsletter-13887093" target="_blank">September 2026</a>
+      <a href="https://mailchi.mp/137cf56f8447/april-newsletter-13883054" target="_blank">April 2026</a>
+      <a href="https://mailchi.mp/3d732b79450e/december-newsletter-13879213" target="_blank">December 2025</a>
+    </div>
   </div>
 </section>
 
 <section>
   <h2><span class="num">03</span>Event Printables &amp; Designs</h2>
+  <p class="note">These were internal materials made for Sojourn attendees and partners, so they're shown here as images only rather than shared in full.</p>
 
   <h3>Vietnam — The Jade Passage · 4–9 September 2026</h3>
   <a class="img-link section-link" href="images/vietnam-event-printables.jpeg" target="_blank"><img class="section-img" src="images/vietnam-event-printables.jpeg" alt="The Jade Passage event printables, Vietnam" loading="lazy"></a>
@@ -187,13 +207,11 @@
     <h4>Welcome Booklet</h4>
     <p>Design and copy for the attendee welcome booklet. It gives guests the full event schedule and introduces who is joining them on the trip: their fellow planners and the partners hosting them.</p>
     <a class="img-link" href="images/vietnam-welcome-booklet.png" target="_blank"><img class="card-img" src="images/vietnam-welcome-booklet.png" alt="The Jade Passage Welcome Booklet" loading="lazy"></a>
-    <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
     <h4>Welcome Suite: cover card + founder's welcome letter</h4>
     <p>The opening pieces of the guest suite. A lace-frame cover with a lotus motif, and a welcome letter in cream with dragon fretwork corners, setting the trip's palette and voice.</p>
     <a class="img-link" href="images/vietnam-welcome-suite.png" target="_blank"><img class="card-img" src="images/vietnam-welcome-suite.png" alt="Vietnam Welcome Suite: lotus lace-frame cover card and founder's welcome letter" loading="lazy"></a>
-    <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
     <h4>Day-wise invitation cards (16)</h4>
@@ -224,19 +242,16 @@
         <figcaption>Day 6</figcaption>
       </figure>
     </div>
-    <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
     <h4>Dinner table cards (about 30)</h4>
     <p>Table cards for the welcome dinner and the other dinner experiences across the Vietnam Sojourn, designed to carry each evening's look onto the table.</p>
     <a class="img-link" href="images/vietnam-dinner-table-cards.png" target="_blank"><img class="card-img" src="images/vietnam-dinner-table-cards.png" alt="Vietnam Sojourn dinner table cards" loading="lazy"></a>
-    <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
     <h4>Hand-fan series: personalised welcome fans + panel session fans (12)</h4>
     <p>One fan format used two ways. Nine personalised welcome fans, each with a guest's name in script, made as keepsakes rather than place cards. Three panel fans (Scale, Originality, Decision Making) given to each panelist the day before their session, showing their slot, topic and the question the panel would discuss.</p>
     <a class="img-link" href="images/vietnam-welcome-suite-fancard.png" target="_blank"><img class="card-img" src="images/vietnam-welcome-suite-fancard.png" alt="Vietnam personalised hand-fan design" loading="lazy"></a>
-    <div class="links"><span class="todo">Add link</span></div>
   </div>
 
   <h3>Mexico — À La Mexicana · 10–16 October 2026</h3>
@@ -244,25 +259,21 @@
     <h4>Welcome Booklet</h4>
     <p>Design and copy for the attendee booklet, following the same format as The Jade Passage: the event schedule and an introduction to the planners and partners joining the trip, carried into À La Mexicana's own visual identity.</p>
     <a class="img-link" href="images/mexico-welcome-booklet.png" target="_blank"><img class="card-img" src="images/mexico-welcome-booklet.png" alt="À La Mexicana Welcome Booklet" loading="lazy"></a>
-    <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
     <h4>Panel event flyers (3)</h4>
     <p>One flyer per panel session, made for partners to share with their own communities to draw attendance. Co-branded with the host venue and partners. The example is the 15 October conference, networking and dinner at Kempinski Hotel Cancún.</p>
     <a class="img-link" href="images/mexico-sojourn-flyer.png" target="_blank"><img class="card-img" src="images/mexico-sojourn-flyer.png" alt="À La Mexicana panel event flyer, Kempinski Hotel Cancún" loading="lazy"></a>
-    <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
     <h4>Panel Session Invitations</h4>
     <p>One card per session for attendees, giving the panel title, theme, four focus questions and the panelists. Co-branded with Casa Malca Tulum.</p>
     <a class="img-link" href="images/mexico-panel-session-attendee-invites.png" target="_blank"><img class="card-img" src="images/mexico-panel-session-attendee-invites.png" alt="À La Mexicana panel session invitations for attendees" loading="lazy"></a>
-    <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
     <h4>Panel Session Screen Slides</h4>
     <p>On-screen title slides for each session, matching the invitations. Session title, theme, and panelist photos with name, company and city.</p>
     <a class="img-link" href="images/mexico-sojourn-panel-screen-slides.png" target="_blank"><img class="card-img" src="images/mexico-sojourn-panel-screen-slides.png" alt="À La Mexicana panel session screen slides" loading="lazy"></a>
-    <div class="links"><span class="todo">Add link</span></div>
   </div>
 </section>
 
@@ -311,11 +322,11 @@
 
 <section>
   <h2><span class="num">06</span>Event Style Guide</h2>
+  <p class="note">An internal guest document, shown here as an image only.</p>
   <div class="card">
     <h4>À La Mexicana — Guest Event Style Guide</h4>
     <p>A day-by-day dress code for six days across six locations. Each day has a themed name and separate day and evening accents. Each look has colour and style direction for women and men, a reference image board and a linked Pinterest board. The header colour changes per day to match that day's palette. Reference imagery curated from Pinterest; layout and direction by me.</p>
     <a class="img-link" href="images/mexico-guest-event-style-guide.png" target="_blank"><img class="card-img" src="images/mexico-guest-event-style-guide.png" alt="À La Mexicana guest event style guide, day-by-day dress code" loading="lazy"></a>
-    <div class="links"><span class="todo">Add link</span></div>
   </div>
 </section>
 
