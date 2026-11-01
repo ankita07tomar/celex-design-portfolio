@@ -51,22 +51,43 @@
   .meta strong { color: var(--green); }
   .meta a { color: var(--green); border-bottom: 1px solid var(--gold); text-decoration: none; }
 
-  /* Card images: click to open full size */
+  /* Images: click to open full size */
   .img-link { display: inline-block; margin: 6px 0 14px; }
   .card-img {
     display: block; max-width: 100%; max-height: 560px; width: auto; height: auto;
     border: 1px solid var(--line); border-radius: 2px;
     transition: border-color .2s;
   }
-  .img-link:hover .card-img { border-color: var(--gold); }
+  .img-link:hover .card-img, .img-link:hover .section-img { border-color: var(--gold); }
+
+  /* Overview image for a sub-section (full width) */
+  .section-link { display: block; margin: 0 0 18px; }
+  .section-img {
+    display: block; width: 100%; height: auto;
+    border: 1px solid var(--line); border-radius: 2px; transition: border-color .2s;
+  }
+
+  /* Two images side by side */
   .img-pair {
     display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
     margin: 6px 0 14px; align-items: start;
   }
-  .img-pair .img-link { margin: 0; }
+  /* Three-column grid for day-by-day sets */
+  .img-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin: 6px 0 14px; align-items: start;
+  }
+  .img-pair .img-link, .img-grid .img-link { margin: 0; display: block; }
   .img-pair .card-img { max-height: 440px; }
+  .img-grid .card-img { width: 100%; max-height: none; }
+  .img-grid figcaption {
+    font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; margin-top: 6px;
+  }
+  .img-grid figure { margin: 0; }
   @media (max-width: 560px) {
     .img-pair { grid-template-columns: 1fr; }
+    .img-grid { grid-template-columns: 1fr 1fr; }
   }
 
   footer { text-align: center; margin-top: 80px; color: var(--gold); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; }
@@ -95,6 +116,7 @@
   <div class="card">
     <h4>Event day-wise highlight carousels</h4>
     <p>Image-only carousels, one per Sojourn day, with the story carried in the caption.</p>
+    <a class="img-link" href="images/event-day-highlight-posts.png" target="_blank"><img class="card-img" src="images/event-day-highlight-posts.png" alt="Sojourn day-wise highlight carousel posts on Instagram" loading="lazy"></a>
     <div class="links"><a href="https://www.instagram.com/p/DfHv1SxAnys/" target="_blank">Example</a></div>
   </div>
   <div class="card">
@@ -120,6 +142,7 @@
   <div class="card">
     <h4>Community-building static series</h4>
     <p>A recurring static post series designed to get engagement from wedding professionals and couples.</p>
+    <a class="img-link" href="images/static-post-series.png" target="_blank"><img class="card-img" src="images/static-post-series.png" alt="Community-building static Instagram post series" loading="lazy"></a>
     <div class="links"><a href="https://www.instagram.com/p/DdY-0AgKdDy/" target="_blank">Example</a></div>
   </div>
 
@@ -134,6 +157,7 @@
   <div class="card">
     <h4><span class="todo">Post title / topic</span></h4>
     <p><span class="todo">Brief</span></p>
+    <a class="img-link" href="images/linkedin-post.png" target="_blank"><img class="card-img" src="images/linkedin-post.png" alt="CELEX Ensemble LinkedIn post" loading="lazy"></a>
     <div class="links"><a href="https://www.linkedin.com/feed/update/urn:li:activity:7478743329233518592" target="_blank">Post 1</a></div>
   </div>
   <div class="card">
@@ -158,9 +182,12 @@
   <h2><span class="num">03</span>Event Printables &amp; Designs</h2>
 
   <h3>Vietnam — The Jade Passage · 4–9 September 2026</h3>
+  <a class="img-link section-link" href="images/vietnam-event-printables.jpeg" target="_blank"><img class="section-img" src="images/vietnam-event-printables.jpeg" alt="The Jade Passage event printables, Vietnam" loading="lazy"></a>
+
   <div class="card">
     <h4>Welcome Booklet</h4>
     <p><span class="todo">Brief</span></p>
+    <a class="img-link" href="images/vietnam-welcome-booklet.png" target="_blank"><img class="card-img" src="images/vietnam-welcome-booklet.png" alt="The Jade Passage Welcome Booklet" loading="lazy"></a>
     <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
@@ -172,10 +199,38 @@
   <div class="card">
     <h4>Day-wise invitation cards (16)</h4>
     <p>One card per experience across six days, from the welcome dinner at the Metropole to dinner inside Dragon Pearl Cave, including the Day 2 Wedding Fest and Calla Bridal Show invitations at Fairmont Hanoi. Each card has a titled theme, short narrative copy, dress code and timing. The look changes per venue (reds for Hanoi, blues for Ha Long Bay, celadon for Hilton Quang Hanh) while the logo, type and card structure stay the same throughout.</p>
-    <div class="img-pair">
-      <a class="img-link" href="images/vietnam-day-wise%20card-day3.png" target="_blank"><img class="card-img" src="images/vietnam-day-wise%20card-day3.png" alt="Vietnam day-wise invitation card, Day 3" loading="lazy"></a>
-      <a class="img-link" href="images/vietnam-day-wise-card-day6.png" target="_blank"><img class="card-img" src="images/vietnam-day-wise-card-day6.png" alt="Vietnam day-wise invitation card, Day 6" loading="lazy"></a>
+    <div class="img-grid">
+      <figure>
+        <a class="img-link" href="images/vietnam-day-wise-cards-day1.png" target="_blank"><img class="card-img" src="images/vietnam-day-wise-cards-day1.png" alt="Vietnam invitation cards, Day 1" loading="lazy"></a>
+        <figcaption>Day 1</figcaption>
+      </figure>
+      <figure>
+        <a class="img-link" href="images/vietnam-day-wise-cards-day2.png" target="_blank"><img class="card-img" src="images/vietnam-day-wise-cards-day2.png" alt="Vietnam invitation cards, Day 2: Wedding Fest and Calla Bridal Show" loading="lazy"></a>
+        <figcaption>Day 2</figcaption>
+      </figure>
+      <figure>
+        <a class="img-link" href="images/vietnam-day-wise%20card-day3.png" target="_blank"><img class="card-img" src="images/vietnam-day-wise%20card-day3.png" alt="Vietnam invitation card, Day 3" loading="lazy"></a>
+        <figcaption>Day 3</figcaption>
+      </figure>
+      <figure>
+        <a class="img-link" href="images/vietnam-day-wise-cards-day4.png" target="_blank"><img class="card-img" src="images/vietnam-day-wise-cards-day4.png" alt="Vietnam invitation cards, Day 4" loading="lazy"></a>
+        <figcaption>Day 4</figcaption>
+      </figure>
+      <figure>
+        <a class="img-link" href="images/vietnam-day-wise-cards-day5.png" target="_blank"><img class="card-img" src="images/vietnam-day-wise-cards-day5.png" alt="Vietnam invitation cards, Day 5" loading="lazy"></a>
+        <figcaption>Day 5</figcaption>
+      </figure>
+      <figure>
+        <a class="img-link" href="images/vietnam-day-wise-card-day6.png" target="_blank"><img class="card-img" src="images/vietnam-day-wise-card-day6.png" alt="Vietnam invitation card, Day 6" loading="lazy"></a>
+        <figcaption>Day 6</figcaption>
+      </figure>
     </div>
+    <div class="links"><span class="todo">Add link</span></div>
+  </div>
+  <div class="card">
+    <h4>Dinner table cards</h4>
+    <p><span class="todo">Brief: how many, what they are (place cards / menus), which dinners</span></p>
+    <a class="img-link" href="images/vietnam-dinner-table-cards.png" target="_blank"><img class="card-img" src="images/vietnam-dinner-table-cards.png" alt="Vietnam Sojourn dinner table cards" loading="lazy"></a>
     <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
@@ -195,6 +250,7 @@
   <div class="card">
     <h4>Panel event flyers (3)</h4>
     <p>One flyer per panel session, made for partners to share with their own communities to draw attendance. Co-branded with the host venue and partners. The example is the 15 October conference, networking and dinner at Kempinski Hotel Cancún.</p>
+    <a class="img-link" href="images/mexico-sojourn-flyer.png" target="_blank"><img class="card-img" src="images/mexico-sojourn-flyer.png" alt="À La Mexicana panel event flyer, Kempinski Hotel Cancún" loading="lazy"></a>
     <div class="links"><span class="todo">Add link</span></div>
   </div>
   <div class="card">
@@ -206,6 +262,7 @@
   <div class="card">
     <h4>Panel Session Screen Slides</h4>
     <p>On-screen title slides for each session, matching the invitations. Session title, theme, and panelist photos with name, company and city.</p>
+    <a class="img-link" href="images/mexico-sojourn-panel-screen-slides.png" target="_blank"><img class="card-img" src="images/mexico-sojourn-panel-screen-slides.png" alt="À La Mexicana panel session screen slides" loading="lazy"></a>
     <div class="links"><span class="todo">Add link</span></div>
   </div>
 </section>
@@ -252,6 +309,7 @@
   <div class="card">
     <h4>À La Mexicana — Guest Event Style Guide</h4>
     <p>A day-by-day dress code for six days across six locations. Each day has a themed name and separate day and evening accents. Each look has colour and style direction for women and men, a reference image board and a linked Pinterest board. The header colour changes per day to match that day's palette. Reference imagery curated from Pinterest; layout and direction by me.</p>
+    <a class="img-link" href="images/mexico-guest-event-style-guide.png" target="_blank"><img class="card-img" src="images/mexico-guest-event-style-guide.png" alt="À La Mexicana guest event style guide, day-by-day dress code" loading="lazy"></a>
     <div class="links"><span class="todo">Add link</span></div>
   </div>
 </section>
